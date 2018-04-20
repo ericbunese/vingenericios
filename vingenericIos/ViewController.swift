@@ -34,8 +34,8 @@ class ViewController: UIViewController, UITextFieldDelegate{
     self.offsetStepper.maximumValue = Double(self.ving.const.count)
     self.offsetStepper2.maximumValue = Double(self.ving.const.count)
     
-    self.offsetLabel.text = "Offset: \(Int(self.offsetStepper.value))"
-    self.offsetLabel2.text = "Offset: \(Int(self.offsetStepper2.value))"
+    self.offsetLabel.text = "Offset1: \(Int(self.offsetStepper.value))"
+    self.offsetLabel2.text = "Offset2: \(Int(self.offsetStepper2.value))"
     self.prod = Int(self.offsetStepper2.value)*Int(self.offsetStepper.value)
     
     NotificationCenter.default.addObserver(
@@ -66,12 +66,12 @@ class ViewController: UIViewController, UITextFieldDelegate{
   }
   
   @IBAction func offsetStepperChanged(_ sender: Any) {
-    self.offsetLabel.text = "Offset: \(Int(self.offsetStepper.value))"
+    self.offsetLabel.text = "Offset1: \(Int(self.offsetStepper.value))"
     self.prod = Int(self.offsetStepper2.value)*Int(self.offsetStepper.value)
   }
   
   @IBAction func offsetStepper2Changed(_ sender: Any) {
-    self.offsetLabel2.text = "Offset: \(Int(self.offsetStepper2.value))"
+    self.offsetLabel2.text = "Offset2: \(Int(self.offsetStepper2.value))"
     self.prod = Int(self.offsetStepper2.value)*Int(self.offsetStepper.value)
   }
   
