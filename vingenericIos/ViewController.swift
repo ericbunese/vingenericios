@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
   @IBOutlet weak var textFieldCifrado: UITextField!
   
   let ving = Vingenere()
-  var prod = 3
+  var prod = 0
   var keyboardHeight: CGFloat = 0.0
 
   override func viewDidLoad() {

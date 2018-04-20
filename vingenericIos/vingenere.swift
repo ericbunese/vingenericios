@@ -28,7 +28,7 @@ class Vingenere {
     for c in self.text {
       let k = self.key[self.key.index(self.key.startIndex, offsetBy: (pos % self.key.count))]
       if let alf = self.alphabet["\(k)"]{
-        let off = self.const[(prod+pos) % self.key.count]
+        let off = self.const[(prod+pos) % self.const.count]
         if let chr = alf.index(of: "\(c)"){
           str += igl![(chr+off) % (igl?.count)!]
         }
@@ -48,7 +48,7 @@ class Vingenere {
     for c in self.cypher{
       let k = self.key[self.key.index(self.key.startIndex, offsetBy: (pos % self.key.count))]
       if let alf = self.alphabet["\(k)"]{
-        let off = self.const[(prod+pos) % self.key.count]
+        let off = self.const[(prod+pos) % self.const.count]
         let chr = igl?.index(of: "\(c)")
         str += alf[self.modulo(val: (chr!-off), low: 0, upp: alf.count)]
       }
