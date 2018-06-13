@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
   @IBOutlet weak var textFieldCifrado: UITextField!
   
   let ving = Vingenere()
-  var prod = 0
+  var prod = 1
   var keyboardHeight: CGFloat = 0.0
 
   override func viewDidLoad() {
@@ -53,11 +53,11 @@ class ViewController: UIViewController, UITextFieldDelegate{
 
   //MARK: Actions
   @IBAction func pressedCifrar(_ sender: Any) {
-    self.textFieldCifrado.text = self.ving.encode(prod: self.prod)
+    self.textFieldCifrado.text = self.ving.encode(prod: self.prod-1)
   }
   
   @IBAction func actionDecifrar(_ sender: Any) {
-    self.textFieldClaro.text = self.ving.decode(prod: self.prod)
+    self.textFieldClaro.text = self.ving.decode(prod: self.prod-1)
   }
   
   //MARK: UITextFieldDelegate
